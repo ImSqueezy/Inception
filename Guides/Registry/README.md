@@ -117,5 +117,5 @@ In order to create an image, you first need a project. To get you started quickl
 
 ## Next steps
 
-[What is Docker Compose?](../Docker\ Compose/)
+[What is Docker Compose?](<../Docker\ Compose/>)
 
