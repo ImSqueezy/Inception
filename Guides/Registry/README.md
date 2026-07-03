@@ -111,13 +111,11 @@ In order to create an image, you first need a project. To get you started quickl
 
 8. Open [Docker Hub](https://hub.docker.com) and navigate to your repository. Navigate to the **Tags** section and see your newly pushed image.
 
-   ![Screenshot of the Docker Hub page that displays the newly added image tag](/get-started/docker-concepts/the-basics/what-is-a-registry/images/dockerhub-tags.webp?border=true)
+![Screenshot of the Docker Hub page that displays the newly added image tag](/get-started/docker-concepts/the-basics/what-is-a-registry/images/dockerhub-tags.webp?border=true)
 
 **You signed up for a Docker account, created your first Docker Hub repository, and built, tagged, and pushed a container image to your Docker Hub repository.**
 
 ## Next steps
 
-[What is Docker Compose?](/get-started/docker-concepts/the-basics/what-is-a-registry/what-is-Docker-Compose)
-
-
+[What is Docker Compose?](../Docker\ Compose/)
 

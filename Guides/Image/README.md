@@ -126,5 +126,5 @@ Follow the instructions to search and pull a Docker image using CLI to view its 
 
 Learn about distributing images through registries.
 
-[What is a registry?](../Registery/)
+[What is a registry?](../Registry/)
 
