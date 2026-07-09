@@ -1,8 +1,5 @@
 ## What is Docker Compose?
 
-<video src="https://www.youtube.com/watch?v=xhcUIK4fGtY" controls autoplay muted loop width="100%"></video>
-[![Watch the video](./image.png)]([https://youtu.be](https://www.youtube.com/watch?v=xhcUIK4fGtY))
-
 If you've been following the guides so far, you've been working with single container applications. But, now you're wanting to do something more complicated - run databases, message queues, caches, or a variety of other services. Do you install everything in a single container? Run multiple containers? If you run multiple, how do you connect them all together?
 
 One best practice for containers is that each container should do one thing and do it well. While there are exceptions to this rule, avoid the tendency to have one container do multiple things.
