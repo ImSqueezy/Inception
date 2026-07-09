@@ -1,9 +1,9 @@
-# What is Docker Compose?
+## What is Docker Compose?
 
-
-
-
-## Explanation
+<figure>
+  <video src="[YOUR_VIDEO_URL](https://www.youtube.com/watch?v=xhcUIK4fGtY)" width="100%" controls></video>
+  <figcaption>What is Docker Composee</figcaption>
+</figure>
 
 If you've been following the guides so far, you've been working with single container applications. But, now you're wanting to do something more complicated - run databases, message queues, caches, or a variety of other services. Do you install everything in a single container? Run multiple containers? If you run multiple, how do you connect them all together?
 
@@ -76,11 +76,11 @@ Follow the instructions to run the to-do list app on your system.
 
 5. With everything now up and running, you can open [http://localhost:3000](http://localhost:3000) in your browser to see the site. Note that the application may take 10-15 seconds to fully start. If the page doesn't load right away, wait a moment and refresh. Feel free to add items to the list, check them off, and remove them.
 
-![A screenshot of a webpage showing the todo-list application running on port 3000](/get-started/docker-concepts/the-basics/what-is-docker-compose/images/todo-list-app.webp?border=true&w=950&h=400)
+![A screenshot of a webpage showing the todo-list application running on port 3000](https://docs.docker.com/get-started/docker-concepts/the-basics/images/todo-list-app.webp)
 
 6. If you look at the Docker Desktop GUI, you can see the containers and dive deeper into their configuration.
 
-![A screenshot of Docker Desktop dashboard showing the list of containers running todo-list app](/get-started/docker-concepts/the-basics/what-is-docker-compose/images/todo-list-containers.webp?border=true&w=950&h=400)
+![A screenshot of Docker Desktop dashboard showing the list of containers running todo-list app](https://docs.docker.com/get-started/docker-concepts/the-basics/images/todo-list-containers.webp)
 
 
 ### Tear it down
@@ -116,7 +116,7 @@ Since this application was started using Docker Compose, it's easy to tear it al
 
 2. Alternatively, you can use the Docker Desktop GUI to remove the containers by selecting the application stack and selecting the **Delete** button.
 
-![A screenshot of the Docker Desktop GUI showing the containers view with an arrow pointing to the "Delete" button](/get-started/docker-concepts/the-basics/what-is-docker-compose/images/todo-list-delete.webp?w=930&h=400)
+![A screenshot of the Docker Desktop GUI showing the containers view with an arrow pointing to the "Delete" button](https://docs.docker.com/get-started/docker-concepts/the-basics/images/todo-list-delete.webp)
 
     > **Using the GUI for Compose stacks**
     >
