@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-mkdir -p /run/mysqld
-chown mysql:mysql /run/mysqld
+mkdir -p /var/run/mysqld
+chown -R mysql:mysql /var/run/mysqld
 
 if [ ! -d "/var/lib/mysql/mysql" ]; then
     echo "Initializing MariaDB..."
