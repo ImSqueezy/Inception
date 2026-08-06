@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y \
     php7.4-mysql \
     curl \
     ca-certificates \
+    mariadb-client \
     && rm -rf /var/lib/apt/lists/*
 
 # Install WP-CLI
@@ -15,8 +16,6 @@ RUN curl -fsSL https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-
 
 COPY conf/www.conf /etc/php/7.4/fpm/pool.d/www.conf
 COPY tools/entrypoint.sh /usr/local/bin/entrypoint.sh
-
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
-
-ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
