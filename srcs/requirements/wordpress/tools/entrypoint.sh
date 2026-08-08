@@ -38,11 +38,8 @@ if [ ! -f wp-config.php ]; then
             "$WP_USER" \
             "$WP_EMAIL" \
             --user_pass="$WP_PASSWORD" \
-            --role=author \
-            --skip-email
+            --role=author
     fi
 fi
-
-chown -R www-data:www-data /var/www/html
 
 exec php-fpm8.2 -F

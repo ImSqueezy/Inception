@@ -1,10 +1,9 @@
-FROM debian:bullseye
+FROM debian:bookworm
 
 RUN apt-get update \
     && apt-get install -y mariadb-server \
     && rm -rf /var/lib/apt/lists/*
 
-LABEL version="10.5"
 LABEL description="MariaDB Server"
 
 COPY conf/50-server.cnf	/etc/mysql/mariadb.conf.d/50-server.cnf
