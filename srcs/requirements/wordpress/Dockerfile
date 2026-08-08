@@ -3,10 +3,13 @@ FROM debian:bullseye
 RUN apt-get update && apt-get install -y \
     php7.4-fpm \
     php7.4-mysql \
-    curl \
-    ca-certificates \
-    mariadb-client \
-    && rm -rf /var/lib/apt/lists/*
+    php7.4-cli \
+    php7.4-curl \
+    php7.4-gd \
+    php7.4-mbstring \
+    php7.4-xml \
+    php7.4-zip \
+    curl
 
 # Install WP-CLI
 #  -L follows direction of the new file's location on move: HTTP 301
