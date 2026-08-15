@@ -29,17 +29,63 @@ services:
     container_name: nginx
     build: requirements/nginx/
     image: nginx:inception
+    env_file:
+      - .env
     ports:
       - "443:443"
     volumes:
       - wordpress_data:/var/www/html:ro
+      - adminer_data:/var/www/adminer:ro
     networks:
       - inception
     restart: on-failure
     depends_on:
       - wordpress
 
+  redis:
+    container_name: redis
+    build: requirements/redis/
+    image: redis:inception
+    networks:
+      - inception
+    restart: on-failure
 
+  ftp:
+    container_name: ftp
+    build: requirements/ftp/
+    image: ftp:inception
+    env_file:
+      - .env
+    ports:
+      - "21:21"
+      - "21100-21110:21100-21110"
+    volumes:
+      - wordpress_data:/var/www/html
+    networks:
+      - inception
+    restart: on-failure
+    depends_on:
+      - wordpress
+
+  adminer:
+    container_name: adminer
+    build: requirements/adminer/
+    image: adminer:inception
+    volumes:
+      - adminer_data:/var/www/adminer
+    networks:
+      - inception
+    restart: on-failure
+    depends_on:
+      - mariadb
+
+  website:
+    container_name: website
+    build: requirements/website/
+    image: website:inception
+    networks:
+      - inception
+    restart: on-failure
 
 networks:
   inception:
@@ -58,3 +104,4 @@ volumes:
       type: none
       o: bind
       device: /home/$USER/data/wordpress
+  adminer_data:
