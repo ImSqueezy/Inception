@@ -10,6 +10,12 @@ services:
     networks:
       - inception
     restart: on-failure
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-u", "root", "-p${MDB_ROOT_PASS}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
 
   wordpress:
     container_name: wordpress
@@ -23,7 +29,8 @@ services:
       - inception
     restart: on-failure
     depends_on:
-      - mariadb
+      mariadb:
+        condition: service_healthy
 
   nginx:
     container_name: nginx
@@ -35,12 +42,13 @@ services:
       - "443:443"
     volumes:
       - wordpress_data:/var/www/html:ro
-      - adminer_data:/var/www/adminer:ro
     networks:
       - inception
     restart: on-failure
     depends_on:
-      - wordpress
+    - wordpress
+    - website
+    - adminer
 
   redis:
     container_name: redis
@@ -71,8 +79,8 @@ services:
     container_name: adminer
     build: requirements/adminer/
     image: adminer:inception
-    volumes:
-      - adminer_data:/var/www/adminer
+    env_file:
+      - .env
     networks:
       - inception
     restart: on-failure
@@ -89,6 +97,7 @@ services:
 
 networks:
   inception:
+    name: inception
     driver: bridge
 
 volumes:
@@ -104,4 +113,3 @@ volumes:
       type: none
       o: bind
       device: /home/$USER/data/wordpress
-  adminer_data:

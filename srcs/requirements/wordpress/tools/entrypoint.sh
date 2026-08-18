@@ -7,13 +7,6 @@ chmod -R 775 /var/www/html
 
 cd /var/www/html
 
-for i in $(seq 1 30); do
-    if mysqladmin ping -h mariadb -u "$MDB_USER" -p"$MDB_PASSWORD" --silent >/dev/null 2>&1; then
-        break
-    fi
-    sleep 1
-done
-
 if [ ! -f wp-config.php ]; then
     wp core download --allow-root --force
 
