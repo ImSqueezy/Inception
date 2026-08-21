@@ -94,6 +94,22 @@ services:
     networks:
       - inception
     restart: on-failure
+  
+  cadvisor:
+    container_name: cadvisor
+    build: ./requirements/cadvisor
+    image: cadvisor:inception
+    networks:
+      - inception
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:ro
+      - /sys:/sys:ro
+      - /var/lib/docker:/var/lib/docker:ro
+    privileged: true
+    command:
+      - --docker_only
+    restart: on-failure
 
 networks:
   inception:
