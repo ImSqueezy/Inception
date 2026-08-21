@@ -74,6 +74,6 @@ This project must be done on a Virtual Machine but what's the difference between
 - https://hpbn.co/transport-layer-security-tls/
     - A beautiful Article explaining TLS and SSL.
 - [This explains the containers lifecycle](https://www.theodo.com/blog/how-better-management-of-processes-in-docker-can-greatly-improve-a-containers-lifecycle)
-- [https://managingwp.io/2025/10/01/why-php-fpm-process-worker-limits-matter-preventing-server-outages-with-standardized-pool-configuration/](A valuable one about PHP-FPM)
+- [A valuable one about PHP-FPM](https://managingwp.io/2025/10/01/why-php-fpm-process-worker-limits-matter-preventing-server-outages-with-standardized-pool-configuration/)
 - [Read a bit on FTP](https://cubepath.com/docs/use-cases/ftp-sftp-server-with-vsftpd)
 - AI: It for learning purposes throughout this project, They were used as a reference to understand things needed to be configured a certain way, which I then implemented and tested myself.
