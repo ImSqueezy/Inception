@@ -1,5 +1,3 @@
-ADD THE REMAINING SERVICE
-
 # User Documentation
 
 ## Services provided
@@ -11,6 +9,7 @@ ADD THE REMAINING SERVICE
 - Adminer — web-based DB management (adminer.${DOMAIN_NAME}).
 - FTP — file transfer access to the site files.
 - Website — static portfolio site proxied by Nginx.
+- cadvisor - watches running software containers and gathers real-time data on their resource.
 
 ## Start and stop
 
